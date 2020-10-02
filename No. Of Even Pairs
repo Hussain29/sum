@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int n = 0, i = 0, j = 0, count = 0;
+    printf("Enter the desired number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    for(i = 0; i < n; i++)
+    {
+        printf("Enter value at index [%d]:", i);
+        scanf("%d", &arr[i]);
+    }
+    for(i = 0; i < n; i++)
+        {
+            for(j = (i+1); j < n; j++)
+            {
+                if((arr[i] + arr[j])%2 == 0)
+                    count++;
+            }
+        }
+    printf("\nThe array cotains %d even pairs", count);           
+}
