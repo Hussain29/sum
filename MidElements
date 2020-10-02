@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main()
+{
+    int j = 0, i = 0, rown = 0, coln = 0;
+    printf("Enter no. of rows: ");
+    scanf("%d", &rown);
+    printf("Enter no. of columns: ");
+    scanf("%d", &coln);
+    int arr[rown][coln];
+    for(i = 0; i < rown; i++)
+    {
+        for(j = 0; j < coln; j++)
+        {
+            printf("Enter value of [%d][%d]: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    printf("The original matrix is: \n");
+    for(i = 0; i < rown; i++)
+    {
+        for(j = 0; j < coln; j++)
+        {
+           printf("\t%d", arr[i][j]); 
+        }
+        printf("\n");
+    }
+    printf("The matrix without boundry elements is:\n");
+    for(i = 0; i < rown; i++)
+    {
+        for(j = 0; j < coln; j++)
+        {
+           if(i != 0 && j != 0 && i != (rown-1) && j != (coln-1))
+           {
+             printf("\t%d", arr[i][j]);  
+           }
+        }
+        printf("\n");
+    }
+}
