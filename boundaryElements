@@ -2,16 +2,17 @@
 int main()
 {
     int j = 0, i = 0, rown = 0, coln = 0;
+    int arr[20][20];
     printf("Enter no. of rows: ");
     scanf("%d", &rown);
     printf("Enter no. of columns: ");
     scanf("%d", &coln);
-    int arr[rown][coln];
+    // int arr[rown][coln]; Thats not how it works!
     for(i = 0; i < rown; i++)
     {
         for(j = 0; j < coln; j++)
         {
-            printf("Enter value of [%d][%d]: ", i, j);
+            printf("Enter value of [%d][%d]: ", i+1, j+1);
             scanf("%d", &arr[i][j]);
         }
     }
@@ -31,7 +32,7 @@ int main()
         {
            if(i != 0 && j != 0 && i != (rown-1) && j != (coln-1))
            {
-             printf("\t");  
+             printf('\t');  
            }
            else
            {
